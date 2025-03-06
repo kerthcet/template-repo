@@ -1,0 +1,10 @@
+name: Initialization Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  init:
+    uses: kerthcet/github-workflow-as-kube/.github/workflows/workflow-as-kubernetes-init.yaml@main
+    secrets:
+      AGENT_TOKEN: ${{ secrets.AGENT_TOKEN }}
